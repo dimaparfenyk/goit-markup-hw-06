@@ -466,7 +466,56 @@ a {
 .footer-contact-link {
   color: var(--footer-contacts-color);
 }
-/* оформление портфолио */
+
+/*--------- Оформление формы футера-------- */
+.subscription-container {
+  margin-left: 93px;
+}
+.subscript-btn {
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--main-text-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscript-btn:hover {
+}
+
+/* padding: 10px 32px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto; */
+.footer-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ----------------оформление портфолио --------------*/
 .portfolio-section .title {
   display: none;
 }
@@ -590,12 +639,12 @@ a {
   height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms, visibility 250ms;
+  transition: opacity 500ms, visibility 250ms;
 }
 
 .backdrop.is-hidden .modal {
-  transform: scale(0.5);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.5) rotate(180deg) translate(-50%, -50%);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -603,12 +652,12 @@ a {
   top: 50%;
   left: 50%;
 
-  transform: scale(1);
-  transform: translate(-50%, -50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1) rotate(0) translate(-50%, -50%);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -633,4 +682,59 @@ a {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+.modal-title-text {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+/* ----------------оформление формы----------------- */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-field {
+}
+.form-field {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 58px;
+}
+.modal-form-input {
+  display: inline-block;
+  width: 100%;
+  /* width: 448px; */
+  height: 40px;
+  padding-left: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: var(--main-text-color);
+}
+.label-text {
+}
+.modal-btn {
+  display: block;
+  border: none;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.06em;
+  color: #ffffff;
 }
