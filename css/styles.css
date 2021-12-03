@@ -684,20 +684,26 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-
 .button-close {
   position: absolute;
   top: 8px;
   right: 8px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #ffffff;
   padding: 8px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close {
-  justify-content: center;
-  align-items: center;
+.button-close:hover,
+.button-close:focus {
+  fill: var(--accent-color);
 }
 .is-hidden {
   opacity: 0;
